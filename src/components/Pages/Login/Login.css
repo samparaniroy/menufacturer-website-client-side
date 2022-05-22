@@ -1,0 +1,26 @@
+.form-area {
+	padding: 60px;
+    box-shadow: 0 7px 29px 0 rgba(100,100,111,.2);
+    max-width: 490px;
+    margin: 90px auto;
+}
+.form-area form input {
+	width: 100%;
+	margin-bottom: 16px;
+	height: 48px;
+	padding: 0 15px;
+	border-radius: 10px;
+    border: 1px solid #0b114a;
+}
+.form-area h1 {
+	text-align: center;
+	padding: 10px;
+}
+.login-form-area .submit-button {
+	background: #0b114a;
+	width: 100% !important;
+}
+.submit-button {
+	color: black;
+	font-size: 20px;
+}
