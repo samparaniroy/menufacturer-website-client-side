@@ -1,33 +1,44 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import'./Register.css';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate()
 
-    const handleSubmit = event =>{
+    const handleSubmit =  (event) =>{
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
-        const password = event.target.email.value;
-        
+        const password = event.target.password.value;
+        createUserWithEmailAndPassword(email, password);
     }
-    const navigateRegister = event =>{
+    const navigateLogin= () =>{
         navigate('/login')
+    }
+    if(user){
+        navigate('/')
     }
     return (
         <div className='register-form'>
             <h1>Please Register</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" email="name" placeholder='Name' />
+                <input type="text" name="name" id="" placeholder='name'/>
                 <br/>
-                <input type="text" email="email" placeholder='Email' />
+                <input type="email" name="email" id="" placeholder='email' required/>
                 <br/>
-                <input type="password" name="password" id="" placeholder='Password' />
+                <input type="password" name="password" id="" placeholder='password' required/>
                 <br/>
-                <input className='submit-button' type="submit" value="Submit" />
+                <input className='submit-button' type="submit" value="register" />
             </form>
-            <p>If You Haven't Account Yet? <Link to='/login' onClick={navigateRegister} className=''>Please Register</Link></p>
+            <p>Already have an Account? <Link to='/login' onClick={navigateLogin}>Please Login</Link></p>
         </div>
     );
 };
