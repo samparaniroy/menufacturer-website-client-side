@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import'./Register.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
+    const nameRef = useRef('');
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate()
+
+    const handleSubmit = event =>{
+        event.preventDefault();
+        const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+    }
+    const navigateRegister = event =>{
+        navigate('/login')
+    }
     return (
         <div className='register-form'>
             <h1>Please Register</h1>
-            <form>
-                <input type="text" email="name" placeholder='Name' />
+            <form onSubmit={handleSubmit}>
+                <input ref={nameRef} type="text" email="name" placeholder='Name' />
                 <br/>
-                <input type="text" email="email" placeholder='Email' />
+                <input ref={emailRef} type="text" email="email" placeholder='Email' />
                 <br/>
-                <input type="password" name="password" id="" placeholder='Password' />
+                <input ref={passwordRef} type="password" name="password" id="" placeholder='Password' />
                 <br/>
                 <input className='submit-button' type="submit" value="Submit" />
             </form>
-            <p>If You Haven't Account Yet? <Link to='/register' className=''>Please Register</Link></p>
+            <p>If You Haven't Account Yet? <Link to='/login' onClick={navigateRegister} className=''>Please Register</Link></p>
         </div>
     );
 };
