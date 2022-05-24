@@ -21,3 +21,9 @@
 .header-area .row {
 	align-items: center;
 }
+.form-content {
+	display: flex;
+}
+button {
+	margin-left: 15px;
+}

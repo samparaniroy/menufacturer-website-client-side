@@ -6,6 +6,7 @@ import Login from './components/Pages/Login/Login';
 import Register from './components/Pages/Register/Register';
 import Notfound from './components/Pages/Notfound/Notfound';
 import ProductDetail from './components/Pages/ProductDetail/ProductDetail';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -13,7 +14,11 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/product/:productId' element={<ProductDetail></ProductDetail>}></Route>
+        <Route path='/product/:productId' element={
+          <RequireAuth>
+            <ProductDetail></ProductDetail>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>

@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 import './ProductDetail.css'
+import auth from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Loading from '../Loading/Loading';
 
 const ProductDetail = () => {
     const {productId} = useParams();
     const [product, setProduct] = useState({});
+    const [user, loading] = useAuthState(auth);
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data)
+    };
     useEffect(() =>{
         const url = `http://localhost:5000/product/${productId}`
         fetch(url)
@@ -24,7 +33,18 @@ const ProductDetail = () => {
                             <p><small>{product.price}</small></p>
                         </div>
                     </div>
-                    <h1>Order</h1>
+                </div>
+                <div className='w-50 mx-auto py-5'>
+                    <h1>order</h1>
+                    <form className='d-flex flex-column py-2' onSubmit={handleSubmit(onSubmit)}>
+                        <input className='mb-2 py-2 px-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                        <input className='mb-2 py-2 px-2' placeholder='Email' {...register("email",)}  />
+                        <input className='mb-2 py-2 px-2' placeholder='Product Name' {...register("product name")} />
+                        <input className='mb-2 py-2 px-2' placeholder='Address' {...register("address")} />
+                        <input className='mb-2 py-2 px-2' placeholder='City' {...register("city")} />
+                        <input className='mb-2 py-2 px-2' placeholder='Phone' {...register("phone")} />
+                        <input className='mb-2 py-2' type="submit" value="Submit" />
+                    </form>
                 </div>
             </div>
         </div>
