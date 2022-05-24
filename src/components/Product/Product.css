@@ -1,0 +1,26 @@
+.product-item {
+	box-shadow: 0 10px 30px rgba(5, 5, 5, 0.115);
+    margin-bottom: 40px;
+}
+.product-item img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+.product-item h1 {
+	padding: 20px 15px;
+	font-size: 34px;
+}
+.product-item p {
+	padding-left: 15px;
+}
+.button-area {
+	padding: 20px 16px;
+}
+.button-area button {
+	background: antiquewhite;
+	padding: 16px 60px;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Notfound.css'
 
-const Notfund = () => {
+const Notfound = () => {
     return (
         <div className='found-area'>
             <img src="images/image1.jpg" alt="" />
@@ -9,4 +9,4 @@ const Notfund = () => {
     );
 };
 
-export default Notfund;
+export default Notfound;
