@@ -1,0 +1,22 @@
+.footer-area {
+	background: #151320;
+	padding: 60px;
+}
+.footer-content ul {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+.footer-content ul li {
+	list-style: none;
+}
+.footer-content ul li a {
+	margin-right: 16px;
+    font-size: 16px;
+}
+.footer-content p {
+	text-align: center;
+	padding-top: 10px;
+	font-size: 20px;
+    color: #fff;
+}

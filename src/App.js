@@ -7,6 +7,7 @@ import Register from './components/Pages/Register/Register';
 import Notfound from './components/Pages/Notfound/Notfound';
 import ProductDetail from './components/Pages/ProductDetail/ProductDetail';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import Footer from './components/Shared/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
