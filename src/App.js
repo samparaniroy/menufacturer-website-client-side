@@ -8,6 +8,9 @@ import Notfound from './components/Pages/Notfound/Notfound';
 import ProductDetail from './components/Pages/ProductDetail/ProductDetail';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Footer from './components/Shared/Footer';
+import Dashboard from './components/Pages/Dashboard/Dashboard';
+import MyOrders from './components/Pages/Dashboard/MyOrders/MyOrders';
+import AddReview from './components/Pages/Dashboard/AddReview/AddReview';
 
 function App() {
   return (
@@ -20,6 +23,14 @@ function App() {
             <ProductDetail></ProductDetail>
           </RequireAuth>
         }></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
+          </RequireAuth>
+        }>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='review' element={<AddReview></AddReview>}></Route>
+        </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>
