@@ -3,42 +3,48 @@
         "name":"Zinc Plated Hex Blots",
         "img":"https://www.duplexfastener.com/img/stainless-steel-hex-bolt.jpg",
         "description":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        "quantity":"10",
+        "available":"10",
+        "minimum":"5",
         "price":"30"
     },
     {
         "name":"Anchor Blots",
         "img":"https://image.made-in-china.com/202f0j00RQgYiVTdRGuj/DIN933-Zinc-Plated-Hex-Bolts-with-Full-Thread.jpg",
         "description":"met minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        "quantity":"15",
+        "available":"15",
+        "minimum":"6",
         "price":"40"
     },
     {
         "name":"Hex Blots",
         "img":"https://www.shreeshubhamenterprise.com/images/half-thread-bolt-500x500.jpg",
         "description":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        "quantity":"25",
+        "available":"25",
+        "minimum":"8",
         "price":"55"
     },
-    {
+    {   
         "name":"Concrete Anchor Blots",
         "img":"https://media.istockphoto.com/photos/various-of-steel-anchor-bolts-on-white-background-equipment-for-picture-id1345244645?k=20&m=1345244645&s=612x612&w=0&h=3xLRp5blqTw5KOHzdtuEKuS9EkT1xDKbBSbOy_rLHIs=",
         "description":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        "quantity":"30",
+        "available":"30",
+        "minimum":"10",
         "price":"50"
     },
-    {
+    {   
         "name":"Micrometer",
         "img":"https://thumbs.dreamstime.com/b/precision-micrometer-2683765.jpg",
         "description":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        "quantity":"20",
+        "available":"20",
+        "minimum":"9",
         "price":"40"
     },
     {
         "name":"Mounting Eye Blots",
         "img":"https://m.media-amazon.com/images/I/71vN2gYUmYL._SX342_.jpg",
         "description":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        "quantity":"35",
+        "available":"35",
+        "minimum":"7",
         "price":"60"
     }
 ]

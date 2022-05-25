@@ -3,6 +3,7 @@
 }
 .productDetail-item {
 	box-shadow:0 10px 30px rgba(5, 5, 5, 0.115);
+	border-radius: 10px;
 }
 .productDetail-item img {
 	width: 100%;
@@ -11,5 +12,17 @@
 	padding: 20px 20px;
 }
 .productDetail-item p {
+	padding: 10px;
+}
+.productDetail-item p {
 	padding-left: 20px;
+}
+.mb-2.py-2.px-2 {
+	border: 1px solid gray;
+}
+.mb-2.py-2 {
+	border: 1px solid gray;
+}
+.input-button {
+	border: 1px solid gray;
 }

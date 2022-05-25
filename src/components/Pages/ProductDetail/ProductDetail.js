@@ -2,14 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './ProductDetail.css'
-import auth from '../../../firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import Loading from '../Loading/Loading';
 
 const ProductDetail = () => {
     const {productId} = useParams();
     const [product, setProduct] = useState({});
-    const [user, loading] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
@@ -29,13 +25,17 @@ const ProductDetail = () => {
                             <img src={product.img} alt="" />
                             <h1>{product.name}</h1>
                             <p>{product.description}</p>
-                            <p><small>{product.quantity}</small></p>
-                            <p><small>{product.price}</small></p>
+                            <p><span>available quantity: {product.available}</span></p>
+                            <p><span>minimum order quantity: {product.minimum}</span></p>
+                            <p><span>price: {product.price}</span></p>
                         </div>
                     </div>
                 </div>
                 <div className='w-50 mx-auto py-5'>
-                    <h1>order</h1>
+                    <h1 className='text-5xl text-center'>My order</h1>
+                    <form className='text-center py-5'>
+                        <input className='input-button py-2 px-2' type="number" {...register("age", { min: 18, max: 99 })} />
+                    </form>
                     <form className='d-flex flex-column py-2' onSubmit={handleSubmit(onSubmit)}>
                         <input className='mb-2 py-2 px-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                         <input className='mb-2 py-2 px-2' placeholder='Email' {...register("email",)}  />

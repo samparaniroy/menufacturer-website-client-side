@@ -2,6 +2,9 @@
 	box-shadow: 0 10px 30px rgba(5, 5, 5, 0.115);
     margin-bottom: 40px;
 }
+.product-item p {
+	padding-top: 10px;
+}
 .product-item img {
 	width: 100%;
 	height: 260px;
@@ -10,6 +13,11 @@
 .product-item h1 {
 	padding: 20px 15px;
 	font-size: 34px;
+}
+.product-title h1 {
+	font-size: 40px;
+	text-align: center;
+	padding: 50px;
 }
 .product-item p {
 	padding-left: 15px;
