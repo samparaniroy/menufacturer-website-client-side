@@ -10,12 +10,16 @@ const ProductDetail = () => {
     const onSubmit = data => {
         console.log(data)
     };
+    // const quantity = document.getElementById("quantitys").value;
+    // if(product.minimum < quantity){
+    //     alert('disable')
+    // }
     useEffect(() =>{
         const url = `http://localhost:5000/product/${productId}`
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
-    }, [])
+    }, []);
     return (
         <div className="productDetail-area">
             <div className="container">
@@ -34,7 +38,8 @@ const ProductDetail = () => {
                 <div className='w-50 mx-auto py-5'>
                     <h1 className='text-5xl text-center'>My order</h1>
                     <form className='text-center py-5'>
-                        <input className='input-button py-2 px-2' type="number" {...register("age", { min: 18, max: 99 })} />
+
+                        <input id="quantitys" className='input-button py-2 px-2' type="number"/>
                     </form>
                     <form className='d-flex flex-column py-2' onSubmit={handleSubmit(onSubmit)}>
                         <input className='mb-2 py-2 px-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />

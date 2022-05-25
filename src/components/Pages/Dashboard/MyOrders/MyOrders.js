@@ -8,8 +8,6 @@ const MyOrders = () => {
                     <tr>
                     <th scope="col">Product Image</th>
                     <th scope="col">Product Name</th>
-                    <th scope="col">Product Description</th>
-                    <th scope="col">Product Price</th>
                     <th scope="col">Product Delete</th>
                     </tr>
                 </thead>

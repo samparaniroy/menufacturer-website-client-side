@@ -25,9 +25,19 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password);
+        saveuser(email,name);
         await updateProfile({displayName: name});
-        console.log('Updated profile');
-        
+        console.log('Updated profile');   
+    }
+    const saveuser = (email,displayName) => {
+        const user = {email,displayName}
+        fetch('http://localhost:5000/users',{
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(user)
+        })
     }
     if(loading || upDating){
         return <Loading></Loading>
