@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import AddNewProduct from './AddNewProduct/AddNewProduct';
+import ManageProduct from './ManageProduct/ManageProduct';
+import MakeAdmin from './MakeAdmin/MakeAdmin';
+import MyOrders from './MyOrders/MyOrders';
+import AddReview from './AddReview/AddReview';
+import AllOrders from './AllOrders/AllOrders';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
@@ -17,7 +23,16 @@ const Dashboard = () => {
             <div class="drawer-content">
                 <h2 className='text-2xl font-bold text-purple-500'>Welcome to your Dashboard</h2>
                 <Outlet></Outlet>
-                <h2>{user.displayName}</h2>
+                <Routes>
+                        {
+                            !admin && 
+                            <Route index element={<MyOrders></MyOrders>}></Route>
+                        }
+                        {
+                            admin &&
+                            <Route index element={<AllOrders></AllOrders>}></Route>
+                        }
+                    </Routes>
             </div> 
             <div class="drawer-side">
                 <label for="my-drawer-2" class="drawer-overlay"></label> 

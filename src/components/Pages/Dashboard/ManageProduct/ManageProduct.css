@@ -1,0 +1,17 @@
+.manage-area {
+	padding: 70px 0;
+}
+.product-form {
+	box-shadow: 0 7px 29px 0 rgba(100,100,111,.2);
+}
+.table tr td img {
+	width: 140px;
+}
+.add-item-area {
+	padding: 40px;
+	text-align: center;
+}
+.product-form h1 {
+	padding: 40px;
+	text-align: center;
+}
