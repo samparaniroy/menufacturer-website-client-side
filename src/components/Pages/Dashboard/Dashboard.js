@@ -20,24 +20,26 @@ const Dashboard = () => {
                 <h2>{user.displayName}</h2>
             </div> 
             <div class="drawer-side">
-                <label for="my-drawer-4" class="drawer-overlay"></label>
+                <label for="my-drawer-2" class="drawer-overlay"></label> 
                 <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-                    {
-                        !admin && <>
-                        <Link to='/dashboard'>My Orders</Link>
-                        <Link to='/dashboard/review'>My Review</Link>
-                        <Link to='/dashboard/portfolio'>My Portfolio</Link></>
-                    }
-                    {
-                        admin && <>
-                        <Link to='/dashboard'>Make Admin</Link>
-                        <Link to='/dashboard/manageorder'>Manage All Orders</Link>
-                        <Link to='/dashboard/all product'>Manage Products</Link>
-                        <Link to='/dashboard/addnewproduct'>Add a New Product</Link></>
-                    }
+                {
+                    !admin && <>
+                    <li><Link to='/dashboard'>My Order</Link></li>
+                    <li><Link to='/dashboard/review'>My Review</Link></li>
+                    </>
+                }    
+                {
+                    admin && <>
+                    <li><Link to='/dashboard/manageOrder'>Manage All Orders</Link></li>
+                    <li><Link to='/dashboard/makeAdmin'>Make Admin</Link></li>
+                    <li><Link to='/dashboard/manageproduct'>Manage Products</Link></li>
+                    <li><Link to='/dashboard/addnewproduct'>Add a New Product</Link></li>
+                    </>
+                }
                 </ul>
-            </div>
-
+  
+           </div>
+           
         </div>
     );
 };
