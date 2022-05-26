@@ -16,6 +16,7 @@ import RequireAdmin from './components/Pages/RequireAuth/RequireAdmin';
 import ManageProduct from './components/Pages/Dashboard/ManageProduct/ManageProduct';
 import AllOrders from './components/Pages/Dashboard/AllOrders/AllOrders';
 import AddNewProduct from './components/Pages/Dashboard/AddNewProduct/AddNewProduct';
+import Blogs from './components/Pages/Blogs/Blogs';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/product/:productId' element={
           <RequireAuth>
             <ProductDetail></ProductDetail>
