@@ -2,11 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import AddNewProduct from './AddNewProduct/AddNewProduct';
-import ManageProduct from './ManageProduct/ManageProduct';
-import MakeAdmin from './MakeAdmin/MakeAdmin';
 import MyOrders from './MyOrders/MyOrders';
-import AddReview from './AddReview/AddReview';
 import AllOrders from './AllOrders/AllOrders';
 
 const Dashboard = () => {

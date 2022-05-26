@@ -1,0 +1,20 @@
+.review-form {
+	padding: 20px 20px;
+}
+.text-input {
+	border: 1px solid gray;
+	padding: 10px 10px;
+	border-radius: 10px;
+}
+.select-form {
+	border: 1px solid gray;
+}
+.select-form {
+	border: 1px solid gray;
+	padding: 20px 30px;
+}
+input {
+	border: 1px solid gray;
+	padding: 10px 145px;
+	border-radius: 5px;
+}
