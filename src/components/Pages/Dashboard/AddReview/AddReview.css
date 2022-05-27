@@ -1,20 +1,20 @@
-.review-form {
-	padding: 20px 20px;
-}
-.text-input {
-	border: 1px solid gray;
-	padding: 10px 10px;
-	border-radius: 10px;
-}
-.select-form {
-	border: 1px solid gray;
-}
-.select-form {
-	border: 1px solid gray;
-	padding: 20px 30px;
+.order-form.contact-form-area {
+	padding: 40px 20px;
 }
 input {
 	border: 1px solid gray;
 	padding: 10px 145px;
 	border-radius: 5px;
+}
+.reviews-content{
+    box-shadow: 0 7px 29px 0 rgba(100,100,111,.2);
+}
+.review-form {
+	padding: 20px 0;
+	text-align: center;
+}
+.reviews-content h2 {
+	text-align: center;
+	padding: 20px 0 0 0;
+	font-size: 30px;
 }

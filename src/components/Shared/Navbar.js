@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="header-content">
-                            <h1>Nut Stock</h1>
+                            <h1>Bolts</h1>
                         </div>
                     </div>
                     <div className="col-lg-7">
@@ -39,8 +39,8 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className="navbar-end">
-                        <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         </label>
                         </div>
                     </div>

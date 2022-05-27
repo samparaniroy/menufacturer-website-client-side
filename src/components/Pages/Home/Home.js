@@ -3,6 +3,7 @@ import Product from '../../Product/Product';
 import Banner from '../Banner/Banner';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import Products from '../Products/Products';
+import Reviews from '../Reviews/Reviews';
 import './Home.css'
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
                 </div>
             </div>
             <BusinessSummary></BusinessSummary>
+            <Reviews></Reviews>
         </div>
     );
 };

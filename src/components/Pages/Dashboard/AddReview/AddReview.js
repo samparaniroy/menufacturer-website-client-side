@@ -1,50 +1,46 @@
-import React, { useRef } from 'react';
+import React  from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './AddReview.css'
 import auth from '../../../../firebase.init';
 import { useForm } from 'react-hook-form';
 
 const AddReview = () => {
+    const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
-    const { register } = useForm();
-    const reviewRef = useRef();
-    const ratingRef = useRef();
-    const handleAddUser = e =>{
-        const review = reviewRef.current.value;
-        const rating = ratingRef.current.value;
-        const name = user.displayName;
-        const reviewdescription ={name:name,reviewdescription:review,rating:rating}
+
+    const onSubmit = data =>{
         fetch('http://localhost:5000/reviews',{
             method:'POST',
             headers:{
                 'content-type' :'application/json'
             },
-            body:JSON.stringify(reviewdescription)
+            body:JSON.stringify(data)
         })
         .then( res => res.json())
-        .then(data =>{
-            if(data.insertedId){
-                alert('Review Inserted Successfully');
-                e.target.reset();
-            }
+        .then(result =>{
+            alert('Review Inserted Successfully');
+            console.log(result)
         })
-        e.preventDefault();
     }
     return (
         <div className="order-form contact-form-area">
-            <h2>Reviews</h2>
-            <br/>
-            <form onSubmit={handleAddUser} className='review-form'>
-                <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
+            <div className='reviews-content'>
+                <h2>Add Reviews</h2>
                 <br/>
-                <select class="select select-bordered w-full max-w-xs">
-                    <option disabled selected>Who shot first?</option>
-                    <option>Han Solo</option>
-                    <option>Greedo</option>
-                </select>
-                <br/>
-                <input className='mb-2 py-2' type="submit" value="Submit" />
-            </form>
+                <form className='d-flex flex-column py-2 w-50 px-10' onSubmit={handleSubmit(onSubmit)}>
+                        <input className='mb-2 py-2 px-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                        <textarea className='mb-2 py-2 px-2' placeholder='Description' {...register("description",)} ></textarea>
+                        <select className='mb-2 py-2 px-2' {...register("review",)} >
+                            <option>select review</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                        </select>
+                        <input className='mb-2 py-2' type="submit" value="Submit" />
+                    </form>
+            </div>
         </div>
     );
 };

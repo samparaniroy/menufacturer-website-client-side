@@ -44,7 +44,7 @@ const ProductDetail = () => {
                     <form className='d-flex flex-column py-2' onSubmit={handleSubmit(onSubmit)}>
                         <input className='mb-2 py-2 px-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                         <input className='mb-2 py-2 px-2' placeholder='Email' {...register("email",)}  />
-                        <input className='mb-2 py-2 px-2' placeholder='Product Name' {...register("product name")} />
+                        <input className='mb-2 py-2 px-2'value={product.name}  placeholder='Product Name' {...register("product name")} />
                         <input className='mb-2 py-2 px-2' placeholder='Address' {...register("address")} />
                         <input className='mb-2 py-2 px-2' placeholder='City' {...register("city")} />
                         <input className='mb-2 py-2 px-2' placeholder='Phone' {...register("phone")} />

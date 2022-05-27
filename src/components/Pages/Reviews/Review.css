@@ -1,0 +1,36 @@
+.review-area {
+	padding: 60px 60px;
+}
+.review-title h1 {
+	text-align: center;
+	font-size: 40px;
+	padding-bottom: 81px;
+}
+.review-slider-area {
+	margin-bottom: 60px;
+}
+.slider-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	border: none;
+	box-shadow: 0 1px 3px 0 rgba(36,39,44,.15);
+	padding: 20px;
+	border-radius: 20px;
+	margin-top: 30px;
+}
+.slider-item img {
+	max-width: 90px;
+	margin: auto;
+	padding-bottom: 6px;
+}
+.slider-item p {
+	font-size: 20px;
+	padding-top: 15px;
+}
+.slider-item h2 {
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 10px;
+}

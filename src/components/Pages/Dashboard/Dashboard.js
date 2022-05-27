@@ -14,10 +14,10 @@ const Dashboard = () => {
         .then(data=> setAdmin(data.admin))
     })
     return (
-        <div class="drawer drawer-mobile">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-                <h2 className='text-2xl font-bold text-purple-500'>Welcome to your Dashboard</h2>
+        <div className="drawer drawer-mobile py-3">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+                <h2 className='text-3xl font-bold text-purple-500 text-center py-3'>Welcome {user.displayName}</h2>
                 <Outlet></Outlet>
                 <Routes>
                         {
@@ -30,9 +30,9 @@ const Dashboard = () => {
                         }
                     </Routes>
             </div> 
-            <div class="drawer-side">
-                <label for="my-drawer-2" class="drawer-overlay"></label> 
-                <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+            <div className="drawer-side py-3">
+                <label for="my-drawer-2" className="drawer-overlay"></label> 
+                <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content py-5">
                 {
                     !admin && <>
                     <li><Link to='/dashboard'>My Order</Link></li>
@@ -41,7 +41,7 @@ const Dashboard = () => {
                 }    
                 {
                     admin && <>
-                    <li><Link to='/dashboard/manageOrder'>Manage All Orders</Link></li>
+                    <li><Link to='/dashboard/allorders'>Manage All Orders</Link></li>
                     <li><Link to='/dashboard/makeAdmin'>Make Admin</Link></li>
                     <li><Link to='/dashboard/manageproduct'>Manage Products</Link></li>
                     <li><Link to='/dashboard/addnewproduct'>Add a New Product</Link></li>

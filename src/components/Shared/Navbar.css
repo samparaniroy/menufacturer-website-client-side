@@ -4,6 +4,7 @@
 }
 .header-content h1 {
 	font-size: 50px;
+	text-align: center;
 }
 .header-menubar ul {
 	display: flex;
@@ -26,4 +27,15 @@
 }
 button {
 	margin-left: 15px;
+}
+@media all and (max-width: 575px){
+	.header-menubar ul {
+		display: flex;
+	}
+	.header-menubar ul li {
+		margin-left: 3px;
+	}
+	.banner-area {
+		padding: 60px 10px;
+	}
 }
