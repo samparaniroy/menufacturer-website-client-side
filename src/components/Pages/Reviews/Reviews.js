@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AddReview from "../Dashboard/AddReview/AddReview";
 import './Review.css'
 import SingleReview from "./SingleReview";
 

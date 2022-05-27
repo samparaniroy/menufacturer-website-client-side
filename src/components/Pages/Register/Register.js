@@ -4,8 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import Loading from '../Loading/Loading';
-import SocialLogin from '../SocialLogin/SocialLogin';
-import useToken from '../../hooks/useToken';
+import SocialLogin from '../SocialLogin/SocialLogin';;
 
 const Register = () => {
     const [
@@ -15,7 +14,6 @@ const Register = () => {
       ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
       const [updateProfile, upDating] = useUpdateProfile(auth);
 
-      const[token] = useToken(user);
 
     const navigate = useNavigate()
 
@@ -46,7 +44,7 @@ const Register = () => {
         navigate('/login')
     }
     if(user){
-        // console.log('user', user)
+        navigate(('/'))
     }
     return (
         <div className='register-form'>

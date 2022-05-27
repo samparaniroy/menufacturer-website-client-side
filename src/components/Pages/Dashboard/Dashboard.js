@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import MyOrders from './MyOrders/MyOrders';
 import AllOrders from './AllOrders/AllOrders';
+import MyOrders from './MyOrders/MyOrders';
+
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
@@ -35,7 +36,7 @@ const Dashboard = () => {
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content py-5">
                 {
                     !admin && <>
-                    <li><Link to='/dashboard'>My Order</Link></li>
+                    <li><Link to='/dashboard/myorders'>My Orders</Link></li>
                     <li><Link to='/dashboard/review'>My Review</Link></li>
                     </>
                 }    

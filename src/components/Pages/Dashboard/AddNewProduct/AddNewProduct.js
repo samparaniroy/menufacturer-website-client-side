@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../../../firebase.init';
+import './AddNewProduct.css'
 
 const AddNewProduct = () => {
     const { register, handleSubmit } = useForm();
