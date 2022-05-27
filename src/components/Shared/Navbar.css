@@ -1,10 +1,11 @@
 .header-area {
 	padding: 20px 0;
-	background: antiquewhite;
+	background-color: #151320;
 }
 .header-content h1 {
 	font-size: 50px;
 	text-align: center;
+	color: #fff;
 }
 .header-menubar ul {
 	display: flex;
@@ -18,6 +19,7 @@
 .header-menubar ul li a {
 	text-decoration: none;
 	font-size: 20px;
+	color: #fff;
 }
 .header-area .row {
 	align-items: center;
@@ -28,14 +30,24 @@
 button {
 	margin-left: 15px;
 }
+.header-menubar ul button {
+	color: #fff;
+	font-size: 20px;
+}
 @media all and (max-width: 575px){
 	.header-menubar ul {
-		display: flex;
-	}
-	.header-menubar ul li {
-		margin-left: 3px;
+		display: block;
 	}
 	.banner-area {
-		padding: 60px 10px;
+		padding: 60px 0;
+	}
+	.product-area {
+		padding: 50px 10px;
+	}
+	.text-5xl {
+		font-size: 2rem;
+	}
+	.review-area {
+		padding: 50px 10px;
 	}
 }

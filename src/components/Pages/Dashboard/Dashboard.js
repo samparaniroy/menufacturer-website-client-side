@@ -10,7 +10,7 @@ const Dashboard = () => {
     const [user] = useAuthState(auth);
     const [admin,setAdmin] = useState(false);
     useEffect(() =>{
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://sheltered-bastion-25959.herokuapp.com/user/${user.email}`)
         .then(res => res.json())
         .then(data=> setAdmin(data.admin))
     })

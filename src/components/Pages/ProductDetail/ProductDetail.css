@@ -4,6 +4,7 @@
 .productDetail-item {
 	box-shadow:0 10px 30px rgba(5, 5, 5, 0.115);
 	border-radius: 10px;
+	margin-bottom: 30px;
 }
 .productDetail-item img {
 	width: 100%;

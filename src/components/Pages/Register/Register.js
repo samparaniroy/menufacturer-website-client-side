@@ -29,7 +29,7 @@ const Register = () => {
     }
     const saveuser = (email,displayName) => {
         const user = {email,displayName}
-        fetch('http://localhost:5000/users',{
+        fetch('https://sheltered-bastion-25959.herokuapp.com/users',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

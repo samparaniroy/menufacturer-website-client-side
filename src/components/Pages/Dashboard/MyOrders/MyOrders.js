@@ -7,11 +7,27 @@ const MyOrders = () => {
     const [orders,setOrder] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://sheltered-bastion-25959.herokuapp.com/orders?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrder(data))
     },[])
     const order = orders.filter(order=> order.email !== user.email)
+    const handleDelete = id =>{
+        const proceed = window.confirm('Are you sure');
+        if(proceed){
+            const url = `https://sheltered-bastion-25959.herokuapp.com/orders/${id}`;
+            fetch(url, {
+                method:'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                const remaining = orders.filter(product => product._id !== id);
+                setOrder(remaining)
+            })
+        }
+    }  
+
     return (
         <div className='myorder-area'>
             <h1>My Order</h1>
@@ -37,7 +53,7 @@ const MyOrders = () => {
                         <td>{order.product}</td>
                         <td>{order.address}</td>
                         <td>{order.phone}</td>
-                        <td>Cancel</td>
+                        <td><button className='btn btn-danger' onClick={() => handleDelete(order._id)}>delete</button></td>
                         </tr>):
                         <td></td>
                     }

@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const [product, setProduct] = useState({});
     const { register } = useForm();
     useEffect(() =>{
-        const url = `http://localhost:5000/product/${productId}`
+        const url = `https://sheltered-bastion-25959.herokuapp.com/product/${productId}`
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -29,7 +29,7 @@ const ProductDetail = () => {
             address : event.target.address.value,
             phone : event.target.phone.value
         }
-        fetch('http://localhost:5000/order',{
+        fetch('https://sheltered-bastion-25959.herokuapp.com/order',{
             method:'POST',
             headers:{
                 'content-type' :'application/json'
