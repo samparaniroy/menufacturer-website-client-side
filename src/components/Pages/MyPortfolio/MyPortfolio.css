@@ -1,3 +1,23 @@
 .portfolio-area {
 	padding: 60px 60px;
 }
+.portfolio-content h1 {
+	padding: 20px 0;
+	font-size: 20px;
+}
+.portfolio-content h2 {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.portfolio-content h3 {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.portfolio-content h4 {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.portfolio-content p {
+	font-size: 17px;
+	padding-bottom: 20px;
+}

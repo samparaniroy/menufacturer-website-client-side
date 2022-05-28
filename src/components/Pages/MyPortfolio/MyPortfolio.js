@@ -9,7 +9,8 @@ const MyPortfolio = () => {
                     <div className="portfolio-content">
                         <h1>Sampa Rani Roy</h1>
                         <h2>samparaniroy99@gmail.com</h2>
-                        <h3>In this course I get first Proggramming education. I have learned a lot in 5 months.</h3>
+                        <h3>Honours 2nd Year</h3>
+                        <h4>In this course I get first Proggramming education. I have learned a lot in 5 months.</h4>
                         <p>https://pensive-yonath-e749a3.netlify.app/ </p>
                         <p>project link:https://delicate-centaur-3bd72e.netlify.app/</p>
                         <p>project link:https://friendly-goldstine-c9a726.netlify.app/</p>

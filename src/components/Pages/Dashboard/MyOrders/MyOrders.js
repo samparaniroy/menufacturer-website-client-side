@@ -32,7 +32,7 @@ const MyOrders = () => {
         <div className='myorder-area'>
             <h1>My Order</h1>
             <div class="overflow-x-auto">
-                <table class="table w-full">
+                <table class="table w-full table-normal">
                     <thead>
                     <tr>
                         <th>Name</th>

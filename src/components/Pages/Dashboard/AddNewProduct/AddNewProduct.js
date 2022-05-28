@@ -24,7 +24,7 @@ const AddNewProduct = () => {
         })
     }
     return (
-        <div className='w-50 py-5'>
+        <div className='product-form-area w-50 py-5'>
             <h1 className='text-center'>Add New product</h1>     
             <form className='d-flex flex-column py-2' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2 py-2 px-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />

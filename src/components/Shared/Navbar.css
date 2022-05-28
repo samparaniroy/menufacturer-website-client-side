@@ -36,18 +36,43 @@ button {
 }
 @media all and (max-width: 575px){
 	.header-menubar ul {
-		display: block;
+		display: inline-block;
 	}
 	.banner-area {
-		padding: 60px 0;
+		padding: 60px 10px !important;		
 	}
 	.product-area {
-		padding: 50px 10px;
+		padding: 50px 10px !important;
 	}
 	.text-5xl {
 		font-size: 2rem;
 	}
 	.review-area {
-		padding: 50px 10px;
+		padding: 50px 10px !important;
+	}
+	.blogs-area {
+		padding: 60px 16px !important;
+	}
+	.banner-content button {
+		margin-bottom: 25px;
+	}
+	.order-form.contact-form-area {
+		padding: 40px 0px !important;
+	}
+	.productDetail-area {
+		padding: 60px 10px !important;
+	}
+	.mb-2.px-5 {
+		width: 100%;
+	}
+	.product-form-area.w-50.py-5 {
+		width: 100% !important;
+	}
+	input {
+		padding: 10px 0px;
+		width: 100%;
+	}
+	.portfolio-area {
+		padding: 60px 10px !important;
 	}
 }

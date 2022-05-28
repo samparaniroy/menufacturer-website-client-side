@@ -1,9 +1,7 @@
-.w-50.py-5 {
-	box-shadow: 0 7px 29px 0 rgba(100,100,111,.2);
-	padding: 20px 30px;
-	border-radius: 10px;
-}
 .w-50.py-5 h1 {
 	font-size: 29px;
 	padding-bottom: 20px;
+}
+.product-form-area.w-50.py-5 {
+	margin: auto;
 }

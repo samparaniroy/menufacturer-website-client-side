@@ -54,23 +54,25 @@ const ProductDetail = () => {
                             <p>{product.description}</p>
                             <p><span>available quantity: {product.available}</span></p>
                             <p><span>minimum order quantity: {product.minimum}</span></p>
-                            <p><span>price: {product.price}</span></p>
+                            <p><span>price: ${product.price}</span></p>
                         </div>
                     </div>
                 </div>
-                <div className='w-50 mx-auto py-5'>
-                    <h1 className='text-5xl text-center'>My order</h1>
-                    {/* <form className='text-center py-5'>
-                        <input id="quantitys" className='input-button py-2 px-2' type="number"/>
-                    </form> */}
-                    <form className='d-flex flex-column py-2' onSubmit={handlePlacerder}>
-                        <input className='mb-2 py-2 px-2' value={user.displayName} placeholder='Name' {...register("name")} required readOnly />
-                        <input className='mb-2 py-2 px-2' value={user.email} placeholder='Email' {...register("email",)}  required readOnly />
-                        <input className='mb-2 py-2 px-2'value={product.name}  placeholder='Product Name' {...register("product name")}required readOnly />
-                        <input className='mb-2 py-2 px-2' placeholder='Address' {...register("address")} />
-                        <input className='mb-2 py-2 px-2' placeholder='Phone' {...register("phone")} />
-                        <input className='mb-2 py-2' type="submit" value="Submit" />
-                    </form>
+                <div className='orders-area'>
+                    <div className='w-50 mx-auto py-5'>
+                        <h1 className='text-5xl text-center'>My order</h1>
+                        {/* <form className='text-center py-5'>
+                            <input id="quantitys" className='input-button py-2 px-2' type="number"/>
+                        </form> */}
+                        <form className='d-flex flex-column py-2' onSubmit={handlePlacerder}>
+                            <input className='mb-2 py-2 px-2' value={user.displayName} placeholder='Name' {...register("name")} required readOnly />
+                            <input className='mb-2 py-2 px-2' value={user.email} placeholder='Email' {...register("email",)}  required readOnly />
+                            <input className='mb-2 py-2 px-2'value={product.name}  placeholder='Product Name' {...register("product name")}required readOnly />
+                            <input className='mb-2 py-2 px-2' placeholder='Address' {...register("address")} />
+                            <input className='mb-2 py-2 px-2' placeholder='Phone' {...register("phone")} />
+                            <input className='mb-2 py-2' type="submit" value="Submit" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
